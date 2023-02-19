@@ -15,8 +15,13 @@ https://api.themoviedb.org/3/movie/popular?api_key=${process.env.TMDBAPI_KEY}&pa
         {res.results.map((movie) => (
           <Movie
             key={movie.id}
+            id={movie.id}
+            vote_average={movie.vote_average}
+            overview={movie.overview}
             title={movie.title}
+            language={movie.original_language}
             poster_path={movie.poster_path}
+            release_date={movie.release_date}
           />
         ))}
       </div>
