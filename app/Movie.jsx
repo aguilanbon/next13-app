@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Movie({
@@ -17,12 +18,11 @@ export default function Movie({
   const poster_uri = "https://image.tmdb.org/t/p/original";
 
   return (
-    <label htmlFor="my-modal">
+    <Link href={`/${id}`}>
       <div
         className="flex flex-row m-4 relative "
         onMouseEnter={() => setShowMovieDetails(true)}
         onMouseLeave={() => setShowMovieDetails(false)}
-        onClick={() => setShowMovieModal(true)}
       >
         <div className="flex flex-col items-center justify-center">
           <Image
@@ -30,6 +30,7 @@ export default function Movie({
             width={220}
             height={140}
             className={`rounded-lg cursor-pointer`}
+            alt={title}
           ></Image>
         </div>
         <div
@@ -49,6 +50,6 @@ export default function Movie({
           </div>
         </div>
       </div>
-    </label>
+    </Link>
   );
 }

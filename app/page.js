@@ -1,4 +1,5 @@
 import Movie from "./Movie";
+import MovieModal from "./MovieModal";
 
 export default async function Home() {
   const data = await fetch(`
@@ -8,7 +9,6 @@ https://api.themoviedb.org/3/movie/popular?api_key=${process.env.TMDBAPI_KEY}&pa
 
   return (
     <main>
-      <h1 className="">Next13</h1>
       <div className="flex flex-wrap items-center justify-center">
         {res.results.map((movie) => (
           <Movie
@@ -23,6 +23,7 @@ https://api.themoviedb.org/3/movie/popular?api_key=${process.env.TMDBAPI_KEY}&pa
           />
         ))}
       </div>
+      <MovieModal />
     </main>
   );
 }

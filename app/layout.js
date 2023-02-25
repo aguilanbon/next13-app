@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import './globals.css'
 import { Montserrat } from '@next/font/google'
-import MovieModal from './MovieModal'
 
 const montserrat = Montserrat({
   weight: ['400', '700'],
@@ -16,15 +15,14 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={`${montserrat.className}`}>
-        <nav>
-          <ul>
-            <li><Link href="/">Home</Link></li>
+      <body className={`${montserrat.className} bg-slate-900`}>
+        <nav className='w-full flex p-4'>
+          <ul className='w-full flex flex-row items-end justify-end'>
+            <li className='pr-6'><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
           </ul>
         </nav>
         {children}
-        <MovieModal />
       </body>
     </html>
   )
