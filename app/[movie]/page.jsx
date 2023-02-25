@@ -10,7 +10,7 @@ https://api.themoviedb.org/3/movie/${movie}?api_key=${process.env.TMDBAPI_KEY}`)
   const res = await data.json();
 
   return (
-    <div className="hero min-h-screen bg-slate-900">
+    <div className="hero min-h-screen bg-slate-900 pt-20">
       <div className="hero-content flex-col lg:flex-row">
         <Image
           src={poster_uri + res.poster_path}
