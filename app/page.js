@@ -9,7 +9,7 @@ https://api.themoviedb.org/3/movie/popular?api_key=${process.env.TMDBAPI_KEY}&pa
 
   return (
     <main>
-      <div className="flex flex-wrap items-center justify-center">
+      <div className="flex flex-wrap items-center justify-center pt-10">
         {res.results.map((movie) => (
           <Movie
             key={movie.id}
