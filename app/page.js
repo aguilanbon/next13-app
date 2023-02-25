@@ -6,8 +6,6 @@ https://api.themoviedb.org/3/movie/popular?api_key=${process.env.TMDBAPI_KEY}&pa
 
   const res = await data.json();
 
-  console.log(res);
-
   return (
     <main>
       <h1 className="">Next13</h1>

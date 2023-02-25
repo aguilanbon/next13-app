@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import './globals.css'
 import { Montserrat } from '@next/font/google'
+import MovieModal from './MovieModal'
 
 const montserrat = Montserrat({
   weight: ['400', '700'],
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
           </ul>
         </nav>
         {children}
+        <MovieModal />
       </body>
     </html>
   )
